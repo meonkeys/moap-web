@@ -1,0 +1,348 @@
+<P align=center>
+<B><FONT SIZE=4>HISAAB: Grassroots Micro-Finance Management Software</B></FONT><br/>
+<I>An Experiment in Numeric Interfaces</I>
+</P>
+
+<P align=center>
+<B>Project Specification<br/></B>
+Created: 26-2-02<br/>
+Modified: 14-6-02<br/>
+</P>
+
+<H3>3.  Functional Requirements</H3>
+
+<p>
+These are the high-level functional requirements of the Hisaab software module.
+</p>
+
+
+<h3> Module A - Client / Internal Accounting (Meeting Leader)</h3>	
+
+<ul>
+	<li><B>3.1 Group Meeting Accounting</B>
+	<p>
+	The software should be able to handle Group Internal Accounting, either in the format of a SHG Meeting, or by entering one transaction at a time.  These transactions should be dual-verifiable - when the transaction is recorded it should be clear to both the Group Leader and the Client that the correct information has been recorded.  For this reason appropriate visual feedback is very important.  These are the following kinds of transactions that must be processed:
+	<ul>
+		<li>Collect Subscription Fee / Deposit</li>
+		<li>Collect Loan Principal Repayment</li>
+		<li>Collect Loan Principal Repayment</li>
+		<li>Disburse a Loan</li>
+		<li>Collect a Fee</li>
+		<li>Record Operational Expense</li>
+	</ul>
+	</p>
+	For each transaction, the following data at least should be recorded:
+	<ul>
+		<li>Transaction Type</li>
+		<li>Transaction Date</li>
+		<li>Scheduled Date</li>
+		<li>Amount</li>
+		<li>Debit / Credit</li>
+		<li>Account ID</li>
+	</ul>
+	</p>
+	</li>
+	
+	
+
+	<li><B><font color="red">3.2 Client Account Features (Extra)</font></B>
+	<p>
+	The system should also give the end-client access to information about his/her account, either on-screen or as a printed document.  The Client will possibly even less literate and educated than the Group Leaders, so effort should be made to present data in as accessible a manner as possible.  Even though they wont have to interact with the system very much (if at all), they should still be able to see and visualize details about their accounts, such as the following:
+	<ul>
+		<li>Account Balance</li>
+		<li>Account History</li>
+		<li>Account Statement</li>
+		<li>Period Transaction Statement</li>
+		<li>Payment / Deposit Schedule</li>
+		<li>Trends / Porfolio Analysis</li>
+	</ul>
+	</p>
+	</li>
+	</ul>
+	
+
+<h3> Module B - Group / External Accounting (Group Accountant)</h3>	
+
+<ul>
+	<li><B>3.3 Group External Account Management</B>
+	<p>
+	The system should also be able to display a list of the external accounts (and possibly investments) of the Group itself.  This includes savings accounts with banks, loans taken from banks, savings in other institutions, etc.  The offerer of these financial services need not be a bank, it could be the Federation or possibly in the future even another Group.  This data need not be entered nor reside locally.  It could be incrementally downloaded or be available on demand from a central data source, if that facility is possible.  For each account, the following operations / transactions should be possible.
+	</p>
+	<p>
+	<b>Savings Accounts</b>
+	<ul>
+	<li>Open a new account (enter bank / org details, account number, etc.)</li>
+	<li>View / download current liquid balance</li>
+	<li>View / download current total balance</li>
+	<li>View / download transaction history</li>
+	<li>Record / download deposits / withdrawals</li>
+	<li>Record / download interest / dividend income</li>
+	<li>Subtract fees / charges</li>
+	</ul>
+	<b>Credit Accounts</b>
+	<ul>
+	<li>Record / download a Loan (enter bank / org details, loan terms, repayment schedule, etc.)</li>
+	<li>View / download current outstanding</li>
+	<li>View / download transaction history</li>
+	<li>View / download payment schedule</li>
+	<li>Record loan interest / principal repayments (or download)</li>
+	</ul>
+	</p>
+	</li>	
+	
+	
+	
+	<li><B>3.4 Group Accounting</B>
+	<p>
+	The system should be able to track the overall financial status of the Group.  This would include tracking current and historical accounts, cash in hand, liabilities, income, expenses, etc.  It should provide the following: <font color="red">(We need to hash this out better)</font>
+		<ul>
+			<li>Daily Cash Book</li>	 
+			<li>Cash Flow Projections</li>
+			<li>Record Operational Expense / Petty Cash</li>
+		</ul>
+	</p>
+	<p>
+	The system should also be able to pass on some portion of the income / loss of the group as interest / dividend / fees to the members.<br/>
+	Sources of income:
+		<ul>
+			<li>Member loan interest payments</li>
+			<li>Member fees</li>
+			<li>External Savings Interest / Dividend Accrual</li>
+		</ul>
+	Sources of Expenses:
+		<ul>
+			<li>External Loan Fees / Interest</li>
+			<li>Operational Costs</li>
+		</ul>
+	</p>
+	</li>
+	
+	
+	
+	<li><B>3.5 End of Period Processing</B>
+	<p>
+	The system needs to handle end-of-period processing, including processing all interest/ dividend / fee calculations at the end of each accounting cycle. <font="red">Can we describe these processes better?</font>
+	</p>
+	</li>
+	
+	
+	
+	<li><font color="red"><B>3.6 Reporting (Extra)</font></B>
+	<p>
+	The system must generate a range of reports appropriate for SHGs.  It should output these Reports into an electronic format that can be printed, delivered or stored, and is accessible from variety of system platforms.  HTML or PDF could be a good choice.  Here are a list of reports that could be generated: <font color="red">What reports would it be useful for a SHG to produce?</font>  
+	<ul>
+		<li>Reports for External Agencies (Bank, FA, etc.)</li>
+		<li>Daily Reports</li>
+		<li>Daily Delinquency Reports</li>
+		<li>Daily Transaction Reports</li>
+		<li>Monthly, Quarterly, Annual Financial Statements</li>
+		<li>Audit Trail</li>
+		<li>Customer Balances, Histories, Statements, Queries</li>
+		<li><font color=red>Others? Customizable?</font>
+	</ul>
+	</p>
+	</li>	
+</ul>
+
+
+<h3> Module C - Administration (Group Leader / MFI Rep)</h3>	
+
+<ul>
+	<li><B>3.7 Group Management</B>
+	<p>
+	The system will need to manage group, user and account information.  This would include the creation, modification and deletion of Users, Groups and Accounts.  In the initial stages this will also be configured by the external staff member upon installation, but eventually we would hope to provide a simpler interface which could allow the Group Leader to handle some of these Group Management tasks.  These are the tasks that would need to be processed:
+	<ul>
+		<li>Create a Group</li>
+		<li>Modify a Group</li>
+		<li>Close a Group</li>
+		<li>Add a Member to a Group</li>
+		<li>Remove a Member from a Group</li>
+		<li>Create a User</li>
+		<li>Modify a User</li>
+		<li>Delete a User</li>
+		<li>Create an Account for a User</li>
+		<li>Close an Account for a User</li>
+	</ul>
+	</p>
+	<p>
+	This is the information that would have to be entered on the creation / modification of a <b>Group</b>:
+	<ul>
+		<li>Group ID</li>
+		<li>Group Name</li>
+		<li>Date Started</li>
+		<li>Group Address</li>
+		<li>Group Formal Representative (to banks, etc.)</li>
+		<li>Group Leader</li>
+		<li>Group Accountant</li>
+		<li>Other Group Officials</li>
+		<li>Group Members</li>
+		<li>Set Meeting Schedule</li>
+		<li>Set Available Financial Instruments</li>
+		<li>Demographics (caste, race, etc.)</li>
+	</ul>
+	</p>
+	<p>
+		This is the information that would have to be entered on the creation / modification of a <b>User</b>:
+	<ul>
+		<li>Client ID</li>
+		<li>User Name</li>
+		<li>User Address</li>
+		<li>Date Joined</li>
+		<li>Demographics (age, d/o/b, sex, caste, race, etc.)</li>
+	</ul>
+	</p>
+		<p> 
+	This is the information that would have to be entered on the creation / modification of a <b>Account</b>:
+	<ul>
+		<li>Client ID</li>
+		<li>Source ID</li>
+		<li>Account ID</li>
+		<li>Financial Instrument Type</li>
+		<li>Date Opened</li>
+	</ul>
+	</p>
+	<p>
+	The system should also allow the recording of information for external organisations such as Banks, MFIs, Federations, other Groups, Funding Agencies, etc.  Here is the info that should be recorded for each:
+	<ul>
+		<li>Agency Name</li>
+		<li>Agency Address</li>
+		<li>Agency Type (Bank, NGO, FA, MACS, etc.)</li>
+	</ul>
+	</p>
+	</li>
+	
+		
+
+	<li><B>3.8 Security / Administration</B>
+	<p>
+	The system would have to maintain a login / password access for all administrative and processing tasks.  Even if a separate Computer Operator is actually operating the computer, the password should be entered by the Users themselves and not be told to anyone.  There would be several distinct privilege classes, and each administrative user would be assigned priveleges from amongst these classes.  The basic sets of users would include - 1) the "root", core administrator, typically an external staff member, 2) four levels of Group Leaders, over time as the group becomes more mature and the Leader more experienced, more priveleges to set Group Structure and Policies would be given to the Group Leader and 3) the end Client.  These are the specific privelege classes and the allowed operations for each:
+	<ul>
+		<li>Super-User
+		<ul>
+			<li>Assign User Priveleges</li>
+			<li>Create / Modify /Delete Groups</li>
+		</ul>
+		</li>	
+		<li>Group Manager (Level III) - For own group:
+		<ul>
+			<li>Remove Members</li>
+			<li>Close Accounts</li>
+			<li>Set / Modify Financial Instruments</li>
+		</ul></li>
+		<li>Group Manager (Level II)
+		<ul>
+			<li>Add / Modify Members</li>
+			<li>Open / Modify Accounts</li>
+			<li>Set Group Leader / Accountant</li>
+			<li>Set Available Financial Instruments</li>
+		</ul></li>
+		<li>Group Manager (Level I)
+		<ul>
+			<li>Set Meeting Schedule</li>
+			<li>Group External Accounting</li>
+			<li>Data Transfer to Central MIS</li>
+		</ul>
+		</li>
+		<li>Group Manager (Level 0)
+		<ul>
+			<li>Group Internal Accounting</li>
+		</ul></li>
+		<li>Client
+		<ul>
+			<li>View Personal Account Details / History</li>
+		</ul></li>
+		</ul>
+	</p>
+	</li>			
+
+
+	
+	<li><B><font color="red">3.9 Financial Instrument / Business Rules Definition (Extra) </font></B>
+	<p>
+		The system should allow the definition of a number of Financial Instruments (both savings and credit) to be offered within the SHG, specification of the parameters defining these Financial Instruments, and configuration of the Business Rules surrounding the management of these Financial Instruments.
+		</p><p> 
+		Initially the Financial Instruments to be offered and the business rules to be followed will be configured by an external staff member during installation and training with the software, possibly after consultation with the Group Leader and Members.  This will ensure that a simple, appropriate set of instruments and rules will be implemented by the group in the early stages.  In the future we could develop a more accessible interface to this definition process which would allow the Group Leaders themselves to modify and add new financial instruments.
+		</p><p>
+		These are the parameters that can be set for each Savings Financial Instrument:
+		<ul>
+			<li>Name - The name of the instrument</li>
+			<li>Interest Rate - The interest that is earned on the savings account</li>
+			<li>Interest Calculation - The way interest is calculated and compunded</li>
+			<li><font color="Red">Dividend Amount - The amount of dividends earned on the Account (could be Variable)</font>
+			<li><font color="Red">Dividend Frequency - The frequency of dividends</font>
+			<li>Fee Amount - Fees charged for opening the Account
+			<li>Fee Frequency - The frequency of Fee payment
+			<li>Withdrawal Restrictions (Current vs. Term) - Set the restrictions on withdrawals from this account - including the following:
+			<ul>
+				<li>Max Amount - The max amount that can be withdrawn in one transaction / day</li>
+				<li>Fee - The Fee charged to each withdrawal</li>
+				<li>Frequency - How often withdrawals can be taken (monthly, weekly, yearly, etc.)</li>
+				<li>Term - Duration after opening the account after which a withdrawal can be taken</li>
+			</ul>
+			<li>Deposit Requirements (Voluntary vs. Compulsory) - Set the requirements for Deposits to this account: including the following:
+			<ul>
+				<li>Maximum Amount - The maximum amount that must be deposited at each Deposit</li>
+				<li>Minimum Amount - The minimum amount that must be deposited at each Deposit</li>
+				<li>Fixed Amount - The fixed amount of each deposit</li>
+				<li>Frequency - The frequency when deposits must be taken</li>
+			</ul>
+		</p>
+		<p>
+		These are the parameters that can be set for each Credit (Loan) Financial Instrument:
+		<ul>
+			<li>Name - The name of the instrument</li>
+			<li>Max Amount - The maximum amount that can be lent under this instrument</li>
+			<li>Min Amount - The minimum amount that can be lent under this instrument</li>
+		 	<li>Interest Rate - The Interest Rate charged to this Loan</li>
+		 	<li><font color="Red">Interest Rate Calculation - The way Interest is calculated and compounded</li></font>
+		 	<li>Fee Amount - Any fee charged for the loan</li>
+		 	<li>Fee Frequency - The frequency of the above Fee payment</li>
+			<li>Repayment Frequency - When repayments are expected</li>
+			<li>Term - The term of the loan</li>
+			<li>Purpose - Consumer / Commercial / Emergency</li>
+		 	<li>Tied to Savings Product - If this loan is tied to an associated Savings Product</li>
+		 	<li>Late Payment Fee - What is the fee for late Payments</li>
+		 	<li>Late Payment Scheduling - How are late payments scheduled</li>	
+		 	<li>Early Payments - Are early payments allowed</li>
+		 	<li><font color="Red">Balloon Payments - Are balloon payments allowed</li></font>
+		 </ul>
+		</li></ul>
+		</p>
+	</li>
+
+	
+	
+	<li><B><font color="red">3.10 Date Exchange with Central MIS (Extra)</font></B>
+	<p>
+	The system should be able to collate all of the data gathered over an accounting / transaction cycle and to upload all of the relevant data to the central MIS system, which could reside at the office of the Apex Institution, the bank or the supporting MFI.  The types of information that need to be uploaded include the following:
+	<ul>
+		<li>New Members / Accounts</li>
+		<li>Closed Accounts</li>
+		<li>New / Modified Financial Instruments</li>
+		<li>Client Transactions</li>
+		<li>Group Transactions</li> 
+	</ul>
+	<p>
+	Additionally, the system will need to download information at the beginning of each accounting / transaction period.  This would include the following information:
+	<ul>
+		<li>Account Details / Balances</li>
+		<li>Interest / Dividend Earnings on External Savings Accounts</li>
+		<li>External Payments Due / Scheduled</li>
+		<li>Interest Rate / Financial Instrument Changes</li>
+	</ul>
+	<p>
+	The operation of this data transfer module should be flexible and secure.  The data should be able to be transferrd either via dial-up to the central server, via the internet, or via physical media like a Zip disk or CD.  The data will need to be read by a partner program installed on the server-side, which will parse the data and integrate into the local DB securely.  This data will have to be authenticated before it can be integrated centrally, possibly through some password or public / private key mechanism.  XML is the preferable data transfer format.  
+	</p>
+	</li>
+	</ul>	
+	
+	
+	<h3>Extra Features</h3>	
+	<ul>
+	<li><B><font color="red">3.11 MFI Messaging / Feedback (Extra)</font></B>
+	<p>
+	The System should provide some facility to exchange Messages (through the Data Transfer System) to the supporting MFI and / or other external agencies.  These messages could be audio or text-based depending on the literacy of the users.  The system should provide a simple, in-context mechanism to send and receive general messages and responses.  It is not essential that these messages and responses be targeted to a particular user or person, it should be seen as a general mechanism for SHGs to exchange feedback and ideas with the supporting agency / representative.
+	</p>
+	</li>
+	</ul>
+</ul>
