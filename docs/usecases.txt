@@ -1,0 +1,243 @@
+
+Micro-finance Use Cases
+-------------------------
+
+Portfolio System
+------------------
+
+Goal: Setting up loan and savings products
+
+When a micro-finance institution starts a new credit or savings product, certain parameters regarding its behavior must be entered into the system.  For a savings product, this could include values such as the interest rate, the interest period, the type of interest calculation, the minimum balance, mandatory deposit amount, mandatory deposit period, etc.  For loan products it could include things like the interest rate, interest period, interest type, repayment schedule, loan term, penalty type, penalty amount, etc.  These values govern the rules of the product when offered to a particular client.  After a financial product has been defined, it can be offered to clients as a debit or credit account.  
+
+Sub-goals: 
+	- Creating a new loan / savings product from scratch
+	- Creating a new loan / savings product based on an existing product
+	- Editing an existing loan / savings product
+	- De-activating a loan / savings product
+	- Activating a loan / savings product
+	- Setting eligibility requirements for a product 
+	- Viewing sample payment schedule
+Scope: Portfolio System
+Entities:
+	- Loan Product, Savings Product
+Screens:
+	- Loan / Savings Product Editor
+
+
+Goal: Adding / Editing Branch / Federation Information
+
+When creating a new organizational structure, some information about can be entered to be able to track loan portfolio relative to each administrative / operational center.  This could be an actual physical center with an office and legal status, or a virtual setup center for administrative and organizational purposes only.  For example, this could be a federation of clusters in a SHG-based organization, or a branch office in a Grameen-style organization.  In many cases these centers can have their own accounts, especially in an SHG-based system, such as loans they have received or given to other organizations.
+
+Sub-goals:
+	- Defining a new Branch 
+	- Editing Branch / Federation information
+	- Adding / removing groups / clusters / clients from a branch / federation
+Scope: Portfolio System
+Entities: Branch
+Screens: Branch Editor
+
+
+Goal: Adding / Editing Center / Cluster Information
+
+As above, the same information could be added about lower administrative centers, such as a center in a Grameen organization, or a cluster in a SHG Federation.  Once again this would be used to match the portfolio against these administrative centers.
+
+Sub-goals:
+	- Defining a new Center / Cluster
+	- Editing Center / Cluster Information
+	- Adding / removing Groups 
+Entities: Center
+Screens: Center Editor, Group Editor
+
+
+Goal: Adding / Editing Group Information
+
+This would include information about the lowest and most crucial organizational unit both for Grameen-style and SHG-based organizations.  Including basic information about the group such as group location, group name, group demographics, etc., and also keeping track of group membership, i.e. the clients in the group.  In many cases group membership is permanent, and an intact group maintains essentially the same membership over its life span.  In some cases groups also operate their own accounts,  such as solidarity loans taken out in the name of the group, for which all members of the group share joint responsibility.
+
+Sub-goals:
+	- Defining a new Group
+	- Editing Group Information
+	- Editing Group Membership
+	- Including information about group development and training
+	- Adding / Removing / Editing Group Accounts
+Entities: Group
+Screens: Group Editor, Account Editor
+
+
+Goal: Adding / Editing Client Information
+
+Information about each client must be entered when they open an account or join the organization.  This would include the clients name and other important personal or demographic information.  A list of group memberships and personal accounts can trace the client's activity in the organization.
+
+Sub-goals:
+	- Adding a new Client
+	- Editing Client information
+	- Adding a Client account
+	- Closing a Client Account
+	- Viewing Client Account Status and Histories
+	- Viewing a Client's Group Membership and Attendance
+Scope: Portfolio System
+Entities: Client, Account
+Screens: Client Editor, Account Editor
+
+
+Goal: Tracking an individual loan (from application to approval to repayment)
+
+This will allow the monitoring of a single loan, from application, to approval, to disbursal, to account creation, to repayment.  It should include fields to track the loan particulars, such as loan type, purpose, application date, approval date(s), disbursal date and repayment history.  It should also allow for intermediate review and comment on the loan application by various managers and personnel of the organization.  These intermediate reviews can lead to either an intermediate approval, denial or request for revision of the application.  The loan tracker should both show the projected payment schedule and the already completed payments, as well as the current position of the loan (pending, on-time, arrears, defaulted, etc.).  The payment schedule can be edited also, but this should be audited and tracked to ensure that financial discipline is observed.  These should be noted as 'rescheduled' loans, and both the original and new schedules should be retained.
+
+Sub-goals:
+	- Applying for a loan
+	- Noting loan review / partial approval or disapproval (by a certain level of manager)
+	- Noting final approval or disapproval
+	- Noting loan disbursal and account creation 
+	- Creating / editing repayment schedule (based on loan type)
+	- Tracking loan repayment and current loan position
+Scope: Portfolio System
+Entities: Loan Application, Loan Account, Loan Repayment Schedule
+Screens: Loan Tracker
+
+
+Goal: Adding / Editing Client Account Information
+
+Clients may have other accounts, such as savings accounts, with the organization.  The types of accounts offered by an institution are defined by the types of financial products it has created to offer.  We can allow for the creation of a new account for a client based on product type, and set the initial parameters for the account if any of the product parameters are variable (minimum balance, term, repayment rate, etc.)  We can also set up the system to allow viewing of account status and transaction history.
+
+Sub-goals:
+	- Adding a new account and account number for a user (of a certain type)
+	- Editing account information (holder, type, etc.)
+	- View Account status and history
+Scope: Portfolio System
+Entities: Account, Account Product
+Screens: Account Information Editor, Account Status Screen
+
+
+Goal: Entering meeting transactions and notes
+
+Many transactions in micro-finance are conducted in group meetings in local villages, often overseen by an organization staff member.  Other than conducting transactions, these meetings are also often used for providing training and information to clients, for making group-based policy decisions and for recording other generally useful notes and observations.  Most often the information generated in these cases is recorded into paper forms and notebooks and transported back to the office, for example the organization's center or branch office.  There some or all of the data is transcribed digitally into the MIS system.  In some cases data is even recorded directly in the meeting using a laptop or hand-held device, but this is rare.  This module should support transcribing or entering the typical data generated in a meeting.  
+
+Sub-goals:
+	- Scheduling a meeting
+	- Recording meeting attendance
+	- Recording meeting notes / resolutions
+	- Recording transactions conducted at a meeting
+Scope: Portfolio System
+Entities: Meeting, Group, Resolution, Transaction
+Screens: Meeting Information Screen
+
+
+Goal: Entering information about conducted transactions
+
+Other times transactions will be conducted individually, either at the organizational office, at a local market, or somewhere in the field.  There must be some interface to enter these transactions manually also.  Each transaction must occur for a specific account and consist of an amount, date, type of transaction, etc.
+
+Sub-goals:
+	- Entering a conducted transaction for an account (debit or credit)
+Scope: Portfolio System
+Entities: Account, Transaction
+
+
+
+Use Cases - Accounting System
+------------------------------
+
+Goal: Setting up the Chart of Accounts
+
+This involves structuring the chart of accounts used in preparing an organization's balance sheets, etc.  Various account heads need to be created which reflect different activities and cost and income sources for the organization.  Sample chart of accounts exist that would be suitable for many micro-finance institutions, but these may require customization based on particular needs and peculiarities.  
+
+Sub-goals:
+	- Setting up a set of general ledger accounts for balance sheet, etc.
+Scope: Accounting System
+Entities: Ledger
+
+
+Goal: Auditing
+
+This involves review of an organization's financial documents by an accountant or auditor to review performance or to check accuracy by reconciling different financial statements.  This could include the ability to "drill down", to look at a particular value and to see which values it is derived / calculated from. 
+
+Sub-goals:
+	- Reviewing an organizations chart of accounts and ledger entries
+	- "Drilling-down" a particular calculation or value
+Scope: Accounting System
+Entities: Ledger
+
+
+
+Use Cases - All Systems
+-----------------------
+
+Goal: Setting up Data Transfer to Accounting System
+
+Typically when information is entered into the system, it goes into the portfolio management system first.  The accounting system is usually an independent piece of third-party software (although some combined portfolio management and accounting systems for micro-finance exist also).  In the former case, some of the data from the portfolio management system, particularly that pertaining to transactions, must be periodically transferred into the accounting system to keep the accounting statements up-to-date.  For this it would be required to create a mapping or  transfer protocol for this data transfer.  For example, this could exist in the form of a mapping between transaction types and affected ledger accounts.
+
+Sub-goals:
+	- Creating a mapping between transaction types and general ledger accounts 
+	- Transfer transactions from portfolio system into general ledger system
+Scope: Across Portfolio and Accounting Systems
+Entities: Account, Transaction, Ledger
+
+
+Goal: Day closing
+
+This involves the finalization of all transactions and calculation of positions at the close of a business day.  This may include things like applying fees for transactions that should have been conducted but weren't, marking loans as default that have not been paid in a timely manner or recording cash transfers to different accounts.  The cash position will also have to be reconciled, to make sure the amount of cash on hand matches that which was expected to be collected, and to account for the storage or deposit of that cash.
+
+Sub-goals:
+	- Reconciling the days account positions
+	- Reconciling the days cash position
+Scope: Operates over All Systems
+Entities:
+Screens: Day Closing Statement
+
+
+Goal: Yearly closing
+
+This is a more in-depth version of the daily closing.  Account positions will have to be calculated at the end of the fiscal year.  The accounted values will have to be correlated with external bank statements to reconcile cash and equity positions.  Standard financial statements such as fiscal year balance sheets and income statements will have to be generated for review by the organizational management and external auditors as necessary.
+
+Sub-goals:
+	- Reconciling the yearly account positions
+	- Reconciling w/ bank account statements
+	- Generating year-end reports such as balance sheets, income statements, etc.
+Scope: Operates over All Systems
+Entities:
+Screens: Yearly Closing Statement
+
+
+Goal: Generating Reports
+
+Other reports will also have to be generated intermittently by the organization, either for organizational staff to monitor operations, for senior management to observe performance and plan for the future, or for outside agencies who are interested in reviewing the organization's accountability and performance..  There should also be some possibility of creating custom reports, as often donor agencies and other outside parties may request to see statistics specific to their own interests or in a pre-determined format.  All reports should be generated in a visually appealing, cross-platform format, such as PDF or HTML.
+
+Sub-goals:
+	- Reports for loan officers and managers to manage day-to-day operations
+	- Reports for senior management to monitor performance and plan for the future
+	- Reports for outside parties observing the institution
+	- Customized Reports
+Scope: Operates over All Systems
+Entities:
+Screens: Report Generator
+	
+	
+Goal: Setting up System Users / Employees and Privilege Levels
+
+Security for the system must be maintained, and all of the above actions should only be accessible to certain classes of users.  Each user of the system should have a unique user id and password, assigned to a certain privilege class.  Several levels of privilege class will need to be created for different types of employees and users, and different access rights granted to each.  Optimally this should be configurable so that each class of users can be granted or denied privileges as organizational policies or operational protocols change.
+
+Sub-goals:
+	- Adding a user / password
+	- Removing a user / password
+	- Setting a user's privilege class
+	- Creating a new privilege class
+	- Adding / Removing privileges from a privilege class
+	- Entering / Editing a user's information, password
+	- Entering / Editing other employee-related information
+Scope: Operates over All Systems
+Entities: User, Employee, Access Level
+Screens: User / Employee Editor, Privilege Class Editor
+
+
+Actor Catalog
+--------------
+
+A list of the major users / beneficiaries of the MIS system.
+
+	- Client: A client of the organization
+	- Group: A SHG solidarity group or a Grameen Group
+	- Group Representative: A member of the group elected as representative
+	- Loan Officer: Staff member responsible for collecting payments and liaison with clients
+	- Loan Supervisor: Managers of loan officers
+	- Manager: Managers of branches or organizations
+	- Cashier: Handles the cash at an organization or branch
+	- Auditor: External accountant or reviewer of financial records
